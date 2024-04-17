@@ -17,8 +17,20 @@ $fa-font-path: '../fonts/webfonts';
 
 body{
     font-family: $basefont;
+    background-color: $backgroundcolor;
 }
 
 h1 {
-    color: $bluetext;
+    color: $titlecolor;
+}
+
+li {
+    list-style: none;
+    color: $textcolor;
+}
+
+a {
+    text-decoration: none;
+    color: $textcolor;
+    padding: 5px;
 }
