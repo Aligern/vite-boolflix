@@ -42,7 +42,7 @@
         <div>
             <form class="d-flex" role="search">
 
-                 <input class="form-control me-2" type="search" placeholder="Cosa vuoi guardare ?" aria-label="Search" id="searchBar" @keyup.enter="$emit('performSearch')" v-model="store.options.params.query">
+                 <input class="form-control me-2" type="text" placeholder="Cosa vuoi guardare ?" aria-label="Search" id="searchBar" @keyup.enter="$emit('performSearch')" v-model="store.searchFilter">
 
                  <button class="btn btn-outline-success" type="submit" @click="$emit('performSearch')" id="searchButton">
                     Cerca
@@ -72,5 +72,4 @@ header {
     width: 150px;
     padding: 5px;
 }
-
 </style>
