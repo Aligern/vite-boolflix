@@ -5,9 +5,10 @@
                 <img id="logo" src="/images/Netflix_2015_logo.svg" alt="Logo">
             </div>
             <div>
-                <ul class="d-flex align-text-center">
+                <!-- this is our nav list (not working) -->
+                <!-- <ul class="d-flex align-text-center">
                     <li>
-                        <a href="">
+                        <a href="/images/Netflix_2015_logo.svg">
                             Home
                         </a>
                     </li>
@@ -36,15 +37,15 @@
                             La mia lista
                         </a>
                     </li>
-                </ul>
+                </ul> -->
             </div>
         </div>
-        <div>
-                 <input class="form-control me-2" type="text" placeholder="Cosa vuoi guardare ?" aria-label="Search" id="searchBar" @keyup.enter="$emit('performSearch')" v-model="store.searchFilter">
-
-                 <button class="btn btn-outline-success" type="submit" @click="$emit('performSearch')" id="searchButton">
+        <div class="d-flex">
+            <!-- this is the search bar that will work following the emit function -->
+            <input class="form-control me-2" type="text" placeholder="Cosa vuoi guardare ?" aria-label="Search" id="searchBar" @keyup.enter="$emit('performSearch')" v-model="store.searchFilter">
+            <a class="btn btn-outline-success" type="submit" @click="$emit('performSearch')" id="searchButton">
                     Cerca
-                </button>
+            </a>
         </div>
     </header>
 </template>
@@ -64,6 +65,9 @@ import { store } from '../store';
 <style lang="scss" scoped>
 header {
     background-color: #0000005d;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 #logo {
     width: 150px;

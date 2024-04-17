@@ -16,4 +16,5 @@ import CardList from './CardList.vue';
 
 <style lang="scss" scoped>
 
+
 </style>
