@@ -12,10 +12,11 @@ export const store = reactive({
         params: {
             // this is our personal API key:
             api_key: '72b9f59bb742a327478b7837ff8f5382',
-            query: 'ciao',
+            query: 'c',
         }
     },
     // this is our image url base path
     ImageUrl: 'http://image.tmdb.org/t/p/original',
-    
+    movie: [],
+    tv: [],
 });

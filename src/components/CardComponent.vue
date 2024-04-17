@@ -6,15 +6,15 @@
                 <h6>
                     {{ name }}
                 </h6>
-
+                <br>
                 <span>
                     {{ originalName }}
                 </span>
-
+                <br>
                 <span>
                     {{ language }}
                 </span>
-
+                <br>
                 <span>
                     {{ vote }}
                 </span>

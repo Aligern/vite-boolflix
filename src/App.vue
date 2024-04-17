@@ -1,5 +1,5 @@
 <template>
-  <HeaderComponent />
+  <HeaderComponent @performSearch=""/>
   <MainComponent />
 </template>
 
@@ -22,13 +22,13 @@ import MainComponent from './components/MainComponent.vue';
     methods: {
       getMovies() {
         axios.get(this.store.apiUrl + this.store.endPoint.movie, this.store.options).then((res) => {
-          this.store.movie = res.data;
+          this.store.movie = res.data.results;
           console.log(res.data.results);
         })
       },
       getTvSeries() {
         axios.get(this.store.apiUrl + this.store.endPoint.tv, this.store.options).then((res) => {
-          this.store.tv = res.data;
+          this.store.tv = res.data.results;
           console.log(res.data.results);
         })
       }
