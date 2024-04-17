@@ -1,10 +1,11 @@
 <template>
-    <div class="bg-black d-flex justify-content-between align-items-center">
-        <div class="d-flex justify-content-between">
-            <h1>
-                Boolflix
-            </h1>
-                <ul class="d-flex align-items-center">
+    <header class="d-flex justify-content-between align-items-center p-3">
+        <div class="d-flex">
+            <div>
+                <img id="logo" src="/images/Netflix_2015_logo.svg" alt="Logo">
+            </div>
+            <div>
+                <ul class="d-flex align-text-center">
                     <li>
                         <a href="">
                             Home
@@ -36,24 +37,40 @@
                         </a>
                     </li>
                 </ul>
+            </div>
         </div>
         <div>
             <form class="d-flex" role="search">
-                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                 <button class="btn btn-outline-success" type="submit">
-                    Search
+
+                 <input class="form-control me-2" type="search" placeholder="Cosa vuoi guardare ?" aria-label="Search" id="searchBar" @keyup.enter="$emit('performSearch')" v-model="store.options.params.query">
+
+                 <button class="btn btn-outline-success" type="submit" @click="$emit('performSearch')" id="searchButton">
+                    Cerca
                 </button>
             </form>
         </div>
-    </div>
+    </header>
 </template>
 
 <script>
+import { store } from '../store';
     export default {
         name: 'HeaderComponent',
+        data() {
+            return {
+                store
+            }
+        }
     }
 </script>
 
 <style lang="scss" scoped>
+header {
+    background-color: #0000005d;
+}
+#logo {
+    width: 150px;
+    padding: 5px;
+}
 
 </style>

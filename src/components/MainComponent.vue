@@ -1,15 +1,15 @@
 <template>
-    <div class="container">
-        <CardComponent />
-    </div>
+    <main class="container">
+        <CardList />
+    </main>
 </template>
 
 <script>
-import CardComponent from './CardComponent.vue';
+import CardList from './CardList.vue';
     export default {
         name: 'MainComponent',
         components: {
-            CardComponent
+            CardList
         }
     }
 </script>

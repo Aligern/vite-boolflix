@@ -22,18 +22,20 @@ import MainComponent from './components/MainComponent.vue';
     methods: {
       getMovies() {
         axios.get(this.store.apiUrl + this.store.endPoint.movie, this.store.options).then((res) => {
+          this.store.movie = res.data;
           console.log(res.data.results);
         })
       },
       getTvSeries() {
         axios.get(this.store.apiUrl + this.store.endPoint.tv, this.store.options).then((res) => {
+          this.store.tv = res.data;
           console.log(res.data.results);
         })
       }
     },
     created() {
-     // this.getMovies();
-     // this.getTvSeries();
+      this.getMovies();
+      this.getTvSeries();
     }
   }
 </script>
