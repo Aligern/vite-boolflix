@@ -5,11 +5,10 @@
 
             <div id="cardImg" class="flip-card-front">
                 <!--  this is our our cover -->
-                <img :src="img" class="card-img" :alt="name">
-
+                <img :src="img" class="card-img img-fluid" :alt="name">
             </div>
             
-            <div id="cardData" class=" flip-card-back">
+            <div id="cardData" class=" flip-card-back h-100 align-content-center ">
                 <!-- these are our data abput the movie or series -->
                 <p>
                     <h6>
@@ -50,10 +49,9 @@
 // these classes are provvisory
 .flip-card {
   background-color: transparent;
-  width: 250px;
-  height: 300px;
+  width: 300px;
+  height: 470px;
   perspective: 1000px;
-  margin-top: 50px;
 }
 
 .flip-card-inner {
@@ -89,7 +87,9 @@
   transform: rotateY(180deg);
 }
 img {
+    width: 100%;
     height: 100%;
-    display: block;
 }
+
+
 </style>

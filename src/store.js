@@ -16,7 +16,7 @@ export const store = reactive({
         }
     },
     // this is our image url base path
-    ImageUrl: 'http://image.tmdb.org/t/p/original',
+    ImageUrl: 'http://image.tmdb.org/t/p/w342',
     movie: [],
     tv: [],
     searchFilter: '',

@@ -6,7 +6,7 @@
             <h2>
                 Film
             </h2>
-            <div class="col-12 col-md-6 col-lg-2 g-0" v-for="movie in store.movie" :key="movie.id">
+            <div class="col" v-for="movie in store.movie" :key="movie.id">
                 <CardComponent :img="store.ImageUrl + movie.poster_path" :name="movie.title" :originalName="movie.original_title" :language="movie.original_language" :vote="movie.vote_average"/>
             </div>
         </div>
@@ -18,12 +18,11 @@
             <h2>
                 Serie TV
             </h2>
-            <div class="col-12 col-md-4 col-lg-3 g-0" v-for="series in store.tv" :key="series.id">
+            <div class="col" v-for="series in store.tv" :key="series.id">
                 <CardComponent :img="store.ImageUrl + series.poster_path" :name="series.name" :originalName="series.original_name" :language="series.original_language" :vote="series.vote_average"/>
             </div>
         </div>
     </div>
-
 </template>
 
 <script>
