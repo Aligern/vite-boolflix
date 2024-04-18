@@ -3,7 +3,7 @@
         <div class="flip-card-inner">
             <div id="cardImg" class="flip-card-front">
                 <!--  this is our our cover -->
-                <img :src="img" class="card-img img-fluid" :alt="name">
+                <img :src="img" @error="setDefaultImage" class="card-img img-fluid" :alt="name">
             </div>
             <div id="cardData" class=" flip-card-back h-100 align-content-center p-3">
                 <!-- here we have our data about the movie or series -->
@@ -18,12 +18,12 @@
                     <br>
                     <span>
                         Lingua Originale:
-                        <img id="flag" :src="`/images/${language}.png`" :alt="language">
+                        <img id="flag" @error="setDefaultFlag" :src="`/images/${language}.png`" :alt="language">
                     </span>
                     <br>
-                    <span>
-                        Valutazione utenti: {{ vote }}
-                    </span>
+                    <div class="star">
+                        <i :class="{'fa-solid': n <= voteStars, 'fa-regular': n > voteStars}" class="fa-star" v-for="n in 5"></i>
+                    </div>
                 </div>
             </div>
         </div>
@@ -40,16 +40,32 @@
             'language',
             'vote'
         ],
-        computed() {
-            
-        }
+        computed: {
+            voteStars() {
+                return Math.ceil(this.vote / 2);
+            }
+        },
+        methods: {
+            // this function set the default image in case of error for the cover
+            setDefaultImage(event) {
+                event.target.src = '/images/default.png';
+            },
+            // this function set the default image in case of error for the flag
+            setDefaultFlag(event) {
+                event.target.src = '/images/default_flag.png';
+            }
+        },
 }
 </script>
 
 <style lang="scss" scoped>
 #flag {
+    border-radius: 50%;
     height: 25px;
     width: 35px;
+}
+.fa-solid {
+    color: gold;
 }
 .flip-card {
     cursor: pointer;
