@@ -1,15 +1,12 @@
 <template>
     <div class=" flip-card">
-
         <div class="flip-card-inner">
-
             <div id="cardImg" class="flip-card-front">
                 <!--  this is our our cover -->
                 <img :src="img" class="card-img img-fluid" :alt="name">
             </div>
-            
             <div id="cardData" class=" flip-card-back h-100 align-content-center ">
-                <!-- these are our data abput the movie or series -->
+                <!-- these are our data about the movie or series -->
                 <p>
                     <h6>
                         Titolo: {{ name }}

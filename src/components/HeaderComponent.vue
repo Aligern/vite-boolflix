@@ -67,7 +67,8 @@ header {
     background-color: #0000005d;
     position: fixed;
     width: 100%;
-    z-index: 1000;
+    z-index: 4000;
+    height: 70px;
 }
 #logo {
     width: 150px;

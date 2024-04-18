@@ -1,5 +1,5 @@
 <template>
-
+<div id="cardList">
     <!-- this is our film container -->
     <div id="movieCards" class="container">
         <div class="row">
@@ -12,7 +12,7 @@
         </div>
     </div>
 
-    <!-- this is our serie tv container -->
+    <!-- this is our tvseries container -->
     <div id="tvCards" class="container">
         <div class="row">
             <h2>
@@ -23,6 +23,7 @@
             </div>
         </div>
     </div>
+</div>
 </template>
 
 <script>

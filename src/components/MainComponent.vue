@@ -1,6 +1,8 @@
 <template>
-    <main class="container">
-        <CardList />
+    <main class="container vh-100">
+        <div>
+            <CardList />
+        </div>
     </main>
 </template>
 
@@ -15,6 +17,9 @@ import CardList from './CardList.vue';
 </script>
 
 <style lang="scss" scoped>
+main {
+    padding: 100px 0;
+}
 
 
 </style>

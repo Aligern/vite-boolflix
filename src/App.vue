@@ -20,6 +20,7 @@ import MainComponent from './components/MainComponent.vue';
       MainComponent
     },
     methods: {
+      // this is our search function
       searchMovie() {
       if (this.store.searchFilter){
         this.store.options.params.query = this.store.searchFilter,
@@ -30,12 +31,14 @@ import MainComponent from './components/MainComponent.vue';
       this.getMovies();
       this.getTvSeries();
     },
+    // this is our ajax call for movies
       getMovies() {
         axios.get(this.store.apiUrl + this.store.endPoint.movie, this.store.options).then((res) => {
           this.store.movie = res.data.results;
           console.log(res.data.results);
         })
       },
+      // this is our ajax call for tv series
       getTvSeries() {
         axios.get(this.store.apiUrl + this.store.endPoint.tv, this.store.options).then((res) => {
           this.store.tv = res.data.results;
