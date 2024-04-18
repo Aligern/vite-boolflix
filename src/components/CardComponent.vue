@@ -24,6 +24,10 @@
                     <div class="star">
                         <i :class="{'fa-solid': n <= voteStars, 'fa-regular': n > voteStars}" class="fa-star" v-for="n in 5"></i>
                     </div>
+                    <br>
+                    <p>
+                        {{ overview }}
+                    </p>
                 </div>
             </div>
         </div>
@@ -38,7 +42,8 @@
             'originalName',
             'img',
             'language',
-            'vote'
+            'vote',
+            'overview'
         ],
         computed: {
             voteStars() {
@@ -99,6 +104,7 @@
 }
 
 .flip-card-back {
+    overflow-y: auto;
   background-color: black;
   color: white;
   transform: rotateY(180deg);

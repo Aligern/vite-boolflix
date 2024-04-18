@@ -7,7 +7,7 @@
                 Film
             </h2>
             <div class="col-12 col-md-6 col-lg-3 p-0" v-for="movie in store.movie" :key="movie.id">
-                <CardComponent :img="store.ImageUrl + movie.poster_path" :name="movie.title" :originalName="movie.original_title" :language="movie.original_language" :vote="movie.vote_average"/>
+                <CardComponent :img="store.ImageUrl + movie.poster_path" :name="movie.title" :originalName="movie.original_title" :language="movie.original_language" :vote="movie.vote_average" :overview="movie.overview"/>
             </div>
         </div>
     </div>
@@ -19,7 +19,7 @@
                 Serie TV
             </h2>
             <div class="col-12 col-md-6 col-lg-3 p-0" v-for="series in store.tv" :key="series.id">
-                <CardComponent :img="store.ImageUrl + series.poster_path" :name="series.name" :originalName="series.original_name" :language="series.original_language" :vote="series.vote_average"/>
+                <CardComponent :img="store.ImageUrl + series.poster_path" :name="series.name" :originalName="series.original_name" :language="series.original_language" :vote="series.vote_average" :overview="series.overview"/>
             </div>
         </div>
     </div>
