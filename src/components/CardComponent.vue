@@ -5,9 +5,9 @@
                 <!--  this is our our cover -->
                 <img :src="img" class="card-img img-fluid" :alt="name">
             </div>
-            <div id="cardData" class=" flip-card-back h-100 align-content-center ">
+            <div id="cardData" class=" flip-card-back h-100 align-content-center p-3">
                 <!-- these are our data about the movie or series -->
-                <p>
+                <div>
                     <h6>
                         Titolo: {{ name }}
                     </h6>
@@ -23,7 +23,7 @@
                     <span>
                         Valutazione utenti: {{ vote }}
                     </span>
-                </p>
+                </div>
             </div>
         </div>
     </div>
@@ -46,8 +46,8 @@
 // these classes are provvisory
 .flip-card {
   background-color: transparent;
-  width: 300px;
-  height: 470px;
+  width: 200px;
+  height: 270px;
   perspective: 1000px;
 }
 
