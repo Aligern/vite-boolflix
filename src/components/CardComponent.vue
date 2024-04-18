@@ -6,7 +6,7 @@
                 <img :src="img" class="card-img img-fluid" :alt="name">
             </div>
             <div id="cardData" class=" flip-card-back h-100 align-content-center p-3">
-                <!-- these are our data about the movie or series -->
+                <!-- here we have our data about the movie or series -->
                 <div>
                     <h6>
                         Titolo: {{ name }}
@@ -17,7 +17,8 @@
                     </span>
                     <br>
                     <span>
-                        Lingua Originale: {{ language }}
+                        Lingua Originale:
+                        <img id="flag" :src="`/images/${language}.png`" :alt="language">
                     </span>
                     <br>
                     <span>
@@ -33,22 +34,28 @@
     export default {
         name: 'CardComponent',
         props: [
-            'img',
             'name',
             'originalName',
+            'img',
             'language',
             'vote'
-    ]
+        ],
+        computed() {
+            
+        }
 }
 </script>
 
 <style lang="scss" scoped>
-// these classes are provvisory
+#flag {
+    height: 25px;
+    width: 35px;
+}
 .flip-card {
-  background-color: transparent;
-  width: 200px;
-  height: 270px;
-  perspective: 1000px;
+    cursor: pointer;
+    background-color: transparent;
+    aspect-ratio: 1/1.3;
+    perspective: 1000px;
 }
 
 .flip-card-inner {
@@ -56,15 +63,13 @@
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.6s;
+  transition: transform 0.8s;
   transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
-
 .flip-card-front, .flip-card-back {
   position: absolute;
   width: 100%;
@@ -72,7 +77,6 @@
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-
 .flip-card-front {
   background-color: #bbb;
   color: black;
@@ -87,6 +91,4 @@ img {
     width: 100%;
     height: 100%;
 }
-
-
 </style>

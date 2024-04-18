@@ -1,5 +1,5 @@
 <template>
-    <main class="container vh-100">
+    <main class="container vh-100  ">
         <div>
             <CardList />
         </div>
