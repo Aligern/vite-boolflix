@@ -78,7 +78,6 @@
     aspect-ratio: 1/1.3;
     perspective: 1000px;
 }
-
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -87,7 +86,6 @@
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
-
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
@@ -102,7 +100,6 @@
   background-color: #bbb;
   color: black;
 }
-
 .flip-card-back {
     overflow-y: auto;
   background-color: black;

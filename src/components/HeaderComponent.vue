@@ -43,7 +43,7 @@
         <div class="d-flex">
             <!-- this is the search bar that will work following the emit function -->
             <input class="form-control me-2" type="text" placeholder="Cosa vuoi guardare ?" aria-label="Search" id="searchBar" @keyup.enter="$emit('performSearch')" v-model="store.searchFilter">
-            <a class="btn btn-outline-success" type="submit" @click="$emit('performSearch')" id="searchButton">
+            <a class="btn" type="submit" @click="$emit('performSearch')" id="searchButton">
                     Cerca
             </a>
         </div>
@@ -63,6 +63,11 @@ import { store } from '../store';
 </script>
 
 <style lang="scss" scoped>
+@use '../assets/styles/partials/variables' as *;
+#searchButton {
+    color: $textcolor;
+    background-color: $titlecolor;
+}
 header {
     background-color: #0000005d;
     position: fixed;

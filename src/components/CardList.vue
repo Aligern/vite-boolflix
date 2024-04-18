@@ -44,5 +44,4 @@ import CardComponent from './CardComponent.vue';
 
 <style lang="scss" scoped>
 
-
 </style>
