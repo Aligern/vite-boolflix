@@ -1,6 +1,6 @@
 <template>
 <div id="cardList" >
-    
+
     <!-- this is our film container -->
     <div id="movieCards" class="container pt-5 pb-5" v-if="store.movie.length > 0">
             <div>
@@ -15,12 +15,12 @@
             </div>
             <div class="d-flex justify-content-between ">
 
-                <button id="scrollLeftMovie" @click="scroll(-600, 'movieScrollContainer')">
-                 scroll left
+                <button class="ls-btn-left" id="scrollLeftMovie" @click="scroll(-600, 'movieScrollContainer')">
+                    <i class="fa-solid fa-chevron-left"></i>
                 </button>
 
-                <button id="scrollRightMovie" @click="scroll(600, 'movieScrollContainer')">
-                 scroll right
+                <button class="ls-btn-right" id="scrollRightMovie" @click="scroll(600, 'movieScrollContainer')">
+                    <i class="fa-solid fa-chevron-right"></i>
                 </button>
             </div>
     </div>
@@ -39,12 +39,12 @@
         </div>
 
         <div class="d-flex justify-content-between">
-            <button id="scrollLeftTv" @click="scroll(-600, 'tvScrollContainer')">
-                scroll left
+            <button class="ls-btn-left"  id="scrollLeftTv" @click="scroll(-600, 'tvScrollContainer')">
+                <i class="fa-solid fa-chevron-left"></i>
             </button>
 
-            <button id="scrollRightTv" @click="scroll(600, 'tvScrollContainer')">
-                scroll right
+            <button class="ls-btn-right" id="scrollRightTv" @click="scroll(600, 'tvScrollContainer')">
+                <i class="fa-solid fa-chevron-right"></i>
             </button>
         </div>
     </div>
@@ -57,16 +57,16 @@
                 </h2>
             </div>
         <div ref="popMovieScrollContainer" class="dflex">
-            <div class="ls-col" v-for="popularMovie in store.popularMovies" :key="popularMovie.id">
+            <div class=" ls-col" v-for="popularMovie in store.popularMovies" :key="popularMovie.id">
                 <CardComponent :img="store.ImageUrl + popularMovie.poster_path" :name="popularMovie.title" :originalName="popularMovie.original_title" :language="popularMovie.original_language" :vote="popularMovie.vote_average" :overview="popularMovie.overview" />
             </div>
         </div>
         <div class="d-flex justify-content-between">
-            <button id="scrollLeftPopMovie" @click="scroll(-600, 'popMovieScrollContainer')">
-                scroll left
+            <button class="ls-btn-left"  id="scrollLeftPopMovie" @click="scroll(-600, 'popMovieScrollContainer')">
+                <i class="fa-solid fa-chevron-left"></i>
             </button>
-            <button id="scrollRightPopMovie" @click="scroll(600, 'popMovieScrollContainer')">
-                scroll right
+            <button class="ls-btn-right" id="scrollRightPopMovie" @click="scroll(600, 'popMovieScrollContainer')">
+                <i class="fa-solid fa-chevron-right"></i>
             </button>
         </div>
     </div>
@@ -85,11 +85,11 @@
             </div>
         </div>    
             <div class="d-flex justify-content-between">
-                    <button id="scrollLeftPopTv" @click="scroll(-600, 'popTvScrollContainer')">
-                        scroll left
+                    <button class="ls-btn-left"  id="scrollLeftPopTv" @click="scroll(-600, 'popTvScrollContainer')">
+                        <i class="fa-solid fa-chevron-left"></i>
                     </button>
-                    <button id="scrollRightPopTv" @click="scroll(600, 'popTvScrollContainer')">
-                        scroll right
+                    <button class="ls-btn-right" id="scrollRightPopTv" @click="scroll(600, 'popTvScrollContainer')">
+                        <i class="fa-solid fa-chevron-right"></i>
                     </button>
             </div>
         </div>
@@ -124,6 +124,7 @@ import CardComponent from './CardComponent.vue';
 </script>
 
 <style lang="scss" scoped>
+@use '../assets/styles/partials/variables' as *;
 
 .dflex{
     display: flex;
@@ -137,5 +138,21 @@ import CardComponent from './CardComponent.vue';
     padding: 0px 5px;
 }
 
+}
+.ls-btn-left {
+    background-color: #0000005d;
+    border: none;
+    border-radius: 5px;
+    color: $textcolor;
+    padding: 30px 10px;
+    transform: translate(10px, -210px);
+}
+.ls-btn-right {
+    background-color: #0000005d;
+    border: none;
+    border-radius: 5px;
+    color: $textcolor;
+    padding: 30px 10px;
+    transform: translate(-5px, -210px);
 }
 </style>
