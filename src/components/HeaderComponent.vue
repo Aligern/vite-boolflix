@@ -2,13 +2,13 @@
     <header class="d-flex justify-content-between align-items-center p-3">
         <div class="d-flex">
             <div>
-                <img id="logo" src="/images/Netflix_2015_logo.svg" alt="Logo">
+                <img id="logo" src="/images/Fakeflix.png" alt="Logo">
             </div>
             <div>
                 <!-- this is our nav list (not working) -->
                 <ul class="d-flex align-content-center">
                     <li>
-                        <a href="">
+                        <a href="#">
                             Home
                         </a>
                     </li>
@@ -23,18 +23,8 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
-                            Originali
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Aggiunti di recente
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            La mia lista
+                        <a href="#popularMovies">
+                            Popolari
                         </a>
                     </li>
                 </ul>

@@ -28,9 +28,8 @@ import MainComponent from './components/MainComponent.vue';
       } else {
         this.store.options.params.query = '';
       }
-      //this.getMovies();
-      //this.getTvSeries();
-      //this.getPopular();
+      this.getMovies();
+      this.getTvSeries();
     },
     // this is our ajax call for movies
       getMovies() {
@@ -46,18 +45,26 @@ import MainComponent from './components/MainComponent.vue';
           console.log(res.data.results);
         })
       },
-      // this is our ajax call for popular movies and tv series
-      getPopular()  {
-        axios.get(this.store.apiUrl + this.store.endPoint.popular, this.store.options).then((res) => {
-          this.store.mostPopular = res.data.results;
+      // this is our ajax call for popular movies
+      getPopularMovies() {
+        axios.get(this.store.apiUrl + this.store.endPoint.popularMovie, this.store.options).then((res) => {
+          this.store.popularMovies = res.data.results;
+          console.log(res.data.results);
+        })
+      },
+      // this is our ajax call for popular tv series
+      getPopularTv() {
+        axios.get(this.store.apiUrl + this.store.endPoint.popularTv, this.store.options).then((res) => {
+          this.store.popularTvs = res.data.results;
           console.log(res.data.results);
         })
       }
     },
     created() {
-      this.getMovies();
-      this.getTvSeries();
-      this.getPopular();
+      //this.getMovies();
+      //this.getTvSeries();
+      this.getPopularMovies();
+      this.getPopularTv();
     }
   }
 </script>

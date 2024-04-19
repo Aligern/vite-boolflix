@@ -7,19 +7,21 @@ export const store = reactive({
     endPoint: {
         movie: 'search/movie',
         tv: 'search/tv',
-        popular: 'movie/popular',
+        popularMovie: 'movie/popular',
+        popularTv: 'tv/popular',
     },
     options: {
         params: {
             // this is our personal API key:
             api_key: '72b9f59bb742a327478b7837ff8f5382',
-            query: 'a',
+            query: '',
         }
     },
     // this is our image url base path
     ImageUrl: 'http://image.tmdb.org/t/p/w342',
     movie: [],
     tv: [],
-    mostPopular: [],
+    popularMovies: [],
+    popularTvs: [],
     searchFilter: '',
 });

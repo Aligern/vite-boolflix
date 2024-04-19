@@ -1,18 +1,5 @@
 <template>
 <div id="cardList" >
-
-     <!-- this is our popular container -->
-     <div id="popularCards" class="container pt-5 pb-5">
-        <div class="row">
-                <h2 v-if="store.mostPopular.length > 0">
-                    Serie Popolari
-                </h2>
-            <div class="col-12 col-md-6 col-lg-3 p-0" v-for="populars in store.mostPopular"     :key="populars.id">
-                <CardComponent :img="store.ImageUrl + populars.poster_path" :name="populars.name" :originalName="populars.original_name" :language="populars.original_language" :vote="populars.vote_average" :overview="populars.overview"/>
-            </div>
-        </div>
-    </div>
-
     <!-- this is our film container -->
     <div id="movieCards" class="container pt-3">
         <div class="row p-0">
@@ -26,7 +13,6 @@
             </div>
         </div>
     </div>
-
     <!-- this is our tvseries container -->
     <div id="tvCards" class="container pt-5 pb-5">
         <div class="row">
@@ -38,7 +24,28 @@
             </div>
         </div>
     </div>
-
+    <!-- this is our popular movies container -->
+    <div id="popularMovies" class="container pt-5 pb-5">
+        <div class="row">
+            <h2>
+                Film Popolari
+            </h2>
+            <div class="col-12 col-md-6 col-lg-3 p-0" v-for="popularMovie in store.popularMovies" :key="popularMovie.id">
+                <CardComponent :img="store.ImageUrl + popularMovie.poster_path" :name="popularMovie.title" :originalName="popularMovie.original_title" :language="popularMovie.original_language" :vote="popularMovie.vote_average" :overview="popularMovie.overview" />
+            </div>
+        </div>
+    </div>
+    <!-- this is our popular tv series container -->
+    <div id="popularTv" class="container pt-5 pb-5">
+        <div class="row">
+            <h2>
+                Serie TV Popolari
+            </h2>
+            <div class="col-12 col-md-6 col-lg-3 p-0" v-for="popularTv in store.popularTvs" :key="popularTv.id">
+                <CardComponent :img="store.ImageUrl + popularTv.poster_path" :name="popularTv.name" :originalName="popularTv.original_name" :language="popularTv.original_language" :vote="popularTv.vote_average" :overview="popularTv.overview" />
+            </div>
+        </div>
+    </div>    
 </div>    
 </template>
 
