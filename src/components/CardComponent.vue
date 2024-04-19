@@ -25,9 +25,10 @@
                         <i :class="{'fa-solid': n <= voteStars, 'fa-regular': n > voteStars}" class="fa-star" v-for="n in 5"></i>
                     </div>
                     <br>
-                    <p>
+                    <!-- uncomment this to show the overview -->
+                    <!-- <p>
                         {{ overview }}
-                    </p>
+                    </p> -->
                 </div>
             </div>
         </div>
@@ -76,7 +77,6 @@
     cursor: pointer;
     background-color: transparent;
     aspect-ratio: 1/1.5;
-    perspective: 1000px;
 }
 .flip-card-inner {
   position: relative;
