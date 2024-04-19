@@ -25,9 +25,9 @@
                         <i :class="{'fa-solid': n <= voteStars, 'fa-regular': n > voteStars}" class="fa-star" v-for="n in 5"></i>
                     </div>
                     <br>
-                    <h6>
+                    <p>
                         {{ overview }}
-                    </h6>
+                    </p>
                 </div>
             </div>
         </div>

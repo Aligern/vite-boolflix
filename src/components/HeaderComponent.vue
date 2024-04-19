@@ -6,19 +6,19 @@
             </div>
             <div>
                 <!-- this is our nav list (not working) -->
-                <!-- <ul class="d-flex align-text-center">
+                <ul class="d-flex align-content-center">
                     <li>
-                        <a href="/images/Netflix_2015_logo.svg">
+                        <a href="">
                             Home
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="#tvCards">
                             Serie Tv
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="#movieCards">
                             Film
                         </a>
                     </li>
@@ -37,14 +37,14 @@
                             La mia lista
                         </a>
                     </li>
-                </ul> -->
+                </ul>
             </div>
         </div>
         <div class="d-flex">
             <!-- this is the search bar that will work following the emit function -->
             <input class="form-control me-2" type="text" placeholder="Cosa vuoi guardare ?" aria-label="Search" id="searchBar" @keyup.enter="$emit('performSearch')" v-model="store.searchFilter">
             <a class="btn" type="submit" @click="$emit('performSearch')" id="searchButton">
-                    Cerca
+                Cerca
             </a>
         </div>
     </header>
@@ -77,6 +77,12 @@ header {
 }
 #logo {
     width: 150px;
-    padding: 5px;
+    padding-top: 10px;
+}
+ul {
+    line-height: 50px;
+    li{
+        padding: 0 5px;
+    }
 }
 </style>

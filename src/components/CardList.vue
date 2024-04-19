@@ -1,5 +1,18 @@
 <template>
 <div id="cardList" >
+
+     <!-- this is our popular container -->
+     <div id="popularCards" class="container pt-5 pb-5">
+        <div class="row">
+                <h2 v-if="store.mostPopular.length > 0">
+                    Serie Popolari
+                </h2>
+            <div class="col-12 col-md-6 col-lg-3 p-0" v-for="populars in store.mostPopular"     :key="populars.id">
+                <CardComponent :img="store.ImageUrl + populars.poster_path" :name="populars.name" :originalName="populars.original_name" :language="populars.original_language" :vote="populars.vote_average" :overview="populars.overview"/>
+            </div>
+        </div>
+    </div>
+
     <!-- this is our film container -->
     <div id="movieCards" class="container pt-3">
         <div class="row p-0">
@@ -25,7 +38,8 @@
             </div>
         </div>
     </div>
-</div>
+
+</div>    
 </template>
 
 <script>
