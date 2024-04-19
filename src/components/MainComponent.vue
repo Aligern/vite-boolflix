@@ -23,10 +23,10 @@ import CardList from './CardList.vue';
 <style lang="scss" scoped>
 @use '../assets/styles/partials/variables' as *;
 main {
-    padding: 100px 0;
+    padding: 69px 0;
 }
 #jumbotron {
-    height: 500px;
+    height: 450px;
     background-image: url(/public/images/cover-desktop@1x-e6d6aaa1.jpg);
     background-size: cover;
 }

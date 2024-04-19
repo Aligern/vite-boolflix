@@ -13,17 +13,17 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#tvCards">
+                        <a href="#tvCards" v-if="store.movie.length > 0">
                             Serie Tv
                         </a>
                     </li>
                     <li>
-                        <a href="#movieCards">
+                        <a href="#movieCards" v-if="store.movie.length > 0">
                             Film
                         </a>
                     </li>
                     <li>
-                        <a href="#popularMovies">
+                        <a href="#popularMovies" v-if="store.movie.length < 1">
                             Popolari
                         </a>
                     </li>
