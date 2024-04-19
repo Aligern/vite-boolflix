@@ -1,7 +1,8 @@
 <template>
-    <main class="vh-100  ">
+    <main class="vh-100">
         <!-- this is our jumbotron -->
-        <div id="jumbotron" class="text-center align-content-center">
+        <div id="jumbotron" class="align-content-end">
+            <img src="/images/Fakeflix.png" alt="Fakeflix">
         </div>
         <div class="container">
             <CardList />

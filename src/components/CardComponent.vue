@@ -33,7 +33,7 @@
         </div>
     </div>
 </template>
-
+ 
 <script>
     export default {
         name: 'CardComponent',
@@ -75,7 +75,7 @@
 .flip-card {
     cursor: pointer;
     background-color: transparent;
-    aspect-ratio: 1/1.3;
+    aspect-ratio: 1/1.5;
     perspective: 1000px;
 }
 .flip-card-inner {

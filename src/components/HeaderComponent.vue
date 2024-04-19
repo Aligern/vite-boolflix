@@ -1,12 +1,12 @@
 <template>
-    <header class="d-flex justify-content-between align-items-center p-3">
-        <div class="d-flex">
+    <header class="d-flex justify-content-between p-3">
+        <div class="d-flex align-items-center ">
             <div>
                 <img id="logo" src="/images/Fakeflix.png" alt="Logo">
             </div>
             <div>
                 <!-- this is our nav list (not working) -->
-                <ul class="d-flex align-content-center">
+                <ul class="d-flex">
                     <li>
                         <a href="#">
                             Home
@@ -69,8 +69,7 @@ header {
     width: 150px;
     padding-top: 10px;
 }
-ul {
-    line-height: 50px;
+ul { 
     li{
         padding: 0 5px;
     }
