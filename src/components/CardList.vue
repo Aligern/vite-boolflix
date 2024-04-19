@@ -14,11 +14,11 @@
             </div>
             <div class="d-flex justify-content-between ">
 
-                <button id="scrollLeft" @click="scroll(-600, 'movie')">
+                <button id="scrollLeftMovie" @click="scroll(-600, 'movieScrollContainer')">
                  scroll left
                 </button>
 
-                <button id="scrollRight" @click="scroll(600, 'movie')">
+                <button id="scrollRightMovie" @click="scroll(600, 'movieScrollContainer')">
                  scroll right
                 </button>
             </div>
@@ -35,14 +35,17 @@
                 <CardComponent :img="store.ImageUrl + series.poster_path" :name="series.name" :originalName="series.original_name" :language="series.original_language" :vote="series.vote_average" :overview="series.overview"/>
             </div>
         </div>
+
         <div class="d-flex justify-content-between">
-            <button id="scrollLeft" @click="scroll(-450, 'tv')">
+            <button id="scrollLeftTv" @click="scroll(-450, 'tvScrollContainer')">
                 scroll left
             </button>
-            <button id="scrollRight" @click="scroll(450, 'tv')">
+
+            <button id="scrollRightTv" @click="scroll(450, 'tvScrollContainer')">
                 scroll right
             </button>
         </div>
+
     </div>
     <!-- this is our popular movies container -->
     <div ref="popMovieScrollContainer" id="popularMovies" class="container pt-5 pb-5"  v-if="store.movie.length < 1">
@@ -57,10 +60,10 @@
             </div>
         </div>
         <div class="d-flex justify-content-between">
-            <button id="scrollLeft" @click="scroll(-450, 'popMovie')">
+            <button id="scrollLeftPopMovie" @click="scroll(-450, 'popMovieScrollContainer')">
                 scroll left
             </button>
-            <button id="scrollRight" @click="scroll(450, 'popMovie')">
+            <button id="scrollRightPopMovie" @click="scroll(450, 'popMovieScrollContainer')">
                 scroll right
             </button>
         </div>
@@ -78,10 +81,10 @@
             </div>
         </div>    
             <div class="d-flex justify-content-between">
-                    <button id="scrollLeft" @click="scroll(-450, 'popTv')">
+                    <button id="scrollLeftPopTv" @click="scroll(-450, 'popTvScrollContainer')">
                         scroll left
                     </button>
-                    <button id="scrollRight" @click="scroll(450, 'popTv')">
+                    <button id="scrollRightPopTv" @click="scroll(450, 'popTvScrollContainer')">
                         scroll right
                     </button>
             </div>
@@ -103,8 +106,8 @@ import CardComponent from './CardComponent.vue';
             }
         },
         methods: {
-           scroll(distance ) {
-            this.$refs.movieScrollContainer.scrollBy({
+           scroll(distance, id) {
+            this.$refs[id].scrollBy({
                 left: distance,
                 behavior: 'smooth'
             })

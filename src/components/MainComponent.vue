@@ -27,7 +27,7 @@ main {
 }
 #jumbotron {
     height: 450px;
-    background-image: url(/public/images/cover-desktop@1x-e6d6aaa1.jpg);
+    background-image: url(/images/cover-desktop@1x-e6d6aaa1.jpg);
     background-size: cover;
 }
 </style>
